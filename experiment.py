@@ -1,16 +1,3 @@
-"""
-scratch LoRA (lora_scratch_pure.py) vs peft LoRA 비교 실험.
-
-Colab 사용법 (lora_scratch_pure.py 와 이 파일을 같은 폴더에 업로드):
-    !pip install -q peft
-    !python experiment.py --stage all
-
-단계별로 따로 돌릴 수도 있다:
-    --stage pretrain   베이스 모델 사전학습 (enwik8 앞부분) -> base.pt
-    --stage equiv      1 step 동치성 테스트 (logits / gradient 비교)
-    --stage compare    Tiny Shakespeare 로 두 LoRA 를 seed 별로 학습해 비교
-"""
-
 import argparse
 import copy
 import json
